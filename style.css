@@ -1,0 +1,297 @@
+/*This line below is for login form/index*/
+
+@import url(' href="https://fonts.googleapis.com/css?family=Courier');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(Imgs/Barbatos.png)no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+}
+
+.form-box{
+    position:relative;
+    width: 400px;
+    height: 450px;
+    background:#403d3d5d;
+    border: 2px solid rgba((255), 255, 255, 0.5alpha);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 65%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top:-5px;
+
+}
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #f7f7f7;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #ffffff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #ffffff;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.forget label input{
+    margin-right: 3px;
+}
+
+.forget label a{
+    color: #ffffff;
+    text-decoration: none;    
+}
+
+.forget label a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius:40px;
+    background: #f5f5f5b0;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+
+}
+
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
+
+
+/*This line below is for Navigation bar*/
+
+header{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fjalla One', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    position: fixed;
+    width: 100%;
+    top:0;
+    right:0;
+    z-index: 1000;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3f3d3d86;
+    padding: 10px 12%;
+    transition: all .50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo i{
+    color:var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span{
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight:600;
+
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+
+}
+
+.navbar a.active{
+    color: var(--main-color);
+}
+
+.main{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.main a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size:35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width:1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position:absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 27vh;
+        background-color: #cfc9c952;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    
+}
+
+.navbar a{
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: var(--text-color);
+    transform: translateY(5px)
+}
+
+.navbar a.active{
+    color: var(--text-color);
+}
+
+.navbar.open{
+    right: 2%;
+}
+
+
+.user{
+    
+    display: flex;
+    align-items: center;
+}
+
+.user i{
+    color:var(--main-color);
+    font-size: 28px;
+    margin-right:7px ;
+}
+
+:root{
+    --bg-color: #122677;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+
+/*This line below is for registration form*/
